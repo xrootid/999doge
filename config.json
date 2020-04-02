@@ -1,19 +1,19 @@
 {
 
  "Account": {
-     "Username": "layscape",
+     "Username": "layscape1",
      "Password": "aqmar2012"
      },
- "Target Profit": "10",
- "Target Win": "50",
+ "Target Profit": "100",
+ "Target Win": "100000",
  "Lose Target": "1.00000",
  "Interval": "10",
  "Config": [{
 
-     "Name Bet Set": "Mining Chance 60 ‰",
-     "Base Bet": "0.00000003",
+     "Name Bet Set": "Mining Chance 82 ‰",
+     "Base Bet": "0.0001",
      "Max Bet": "OFF",
-     "Chance": "60",
+     "Chance": "82",
      "Random Chance": {
           "Toggle": "OFF",
           "Min": "5",
@@ -27,8 +27,8 @@
               "If Win": "3"
             }
         },
-     "If Win": "1",
-     "If Lose": "1.3",
+     "If Win": "2",
+     "If Lose": "2",
      "Reset If Win": "1",
      "Reset If Profit": "0.0000001",
      "Interval": "10"
