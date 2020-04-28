@@ -1,18 +1,26 @@
-import cloudscraper, json, sys
-from json import *
+import cloudscraper, json, sys, importlib, random
+from warna import *
+from config import *
 #Data
  #Bet Set
-base_bet = float(input('Base Bet :'))
-if_win = int(input('On Win = '))
-if_lose = int(input('On Lose ='))
-chance = int(input('Chance ='))
-low = int(1000000) - (chance) * int(10000)
+'''choice = input("Use Your Current Custom Config? Y/N")
+if choice == Y:
+    from config import *
+    ch = random.randint(chance1, chance2)
+else :
+    base_bet = input(float("Base Bet :"))
+    if_lose = int(3)
+    chance1 = int(65) ##isi sama jika chance tidak random
+    chance2 = int(65) ##isi sama jika chance tidak random
+    target_profit = input(float("Target Profit :"))
+    '''
+ch = random.randint(chance1, chance2)
+low = int(1000000) - (ch) * int(10000)
 num_for = "{:.0f}".format
 if base_bet > 0:
     bid = (0 + base_bet) * float(100000000)
 else:
     bid = (0 + base_bet) / float(100000000)
-print(num_for(int(bid)))
 dbet = {
 "a":"PlaceBet",
 "s":"4b0e122438114b6aa8550df1d4ace992",
@@ -36,42 +44,38 @@ headers = {
 "cookie": "lang=id"
 }
 url_login = 'https://www.999doge.com/api/web.aspx'
-dlogin = 'a=Login&Key=258aed99b1924356909fd825d695a9ac&Username=layscape1&Password=aqmar2012&Totp='
+dlogin = 'a=Login&Key=258aed99b1924356909fd825d695a9ac&Username='+Username+'&Password='+Password+'&Totp='
 dseed = 'a=GetServerSeedHash&s=4b0e122438114b6aa8550df1d4ace992'
 total_profit = int(0)
 scr = cloudscraper.create_scraper()
 def login():
     login = scr.post(url_login, data=dlogin, headers=headers)
+
 login()
 total = 0
 play = scr.post(url_login, data=dbet, headers=headers).json()
-print(play)
 num_format = "{:.8f}".format
-while True:
+while total < target_profit:
+    ch = random.randint(chance1, chance2)
+    low = int(1000000) - (ch) * int(10000)
     profit = (play['PayOut'] - bid) / float(100000000)
+    bidshow = (0 + bid) / 100000000
     total += profit
     if play['PayOut'] > 0:
         balance = (play['StartingBalance'] + play['PayOut']) / float(100000000)
-        print("WIN",play['PayOut'], "Balance :",num_format(balance),"Profit: ",num_format(profit), "Bet :",bid)
+        print(hijau,"[W]",putih+str([ch])+"", "Balance :",num_format(balance),hijau,"Profit: ",num_format(profit),putih, "Bet :",num_format(bidshow))
         if base_bet > 0:
             bid = (0 + base_bet) * float(100000000)
         else:
             bid = (0 + base_bet) / float(100000000)
         bid = int(bid)
-        print("Total =",num_format(total), end="\r") 
-        play = scr.post(url_login, data=dbet, headers=headers).json()
+        print(birutua,"Total =",num_format(total),putih, end="\r") 
+        play = scr.post(url_login, data={"a":"PlaceBet","s":"4b0e122438114b6aa8550df1d4ace992","PayIn": bid,"Low": low,"High":"999999","ClientSeed":"5664556","Currency":"doge","ProtocolVersion":"2"}, headers=headers).json()
     else:
         balance = (play['StartingBalance'] - base_bet) / float(100000000)
-        print("LOSE",play['PayOut'], "Balance :",num_format(balance),"Profit: ",num_format(profit), "Bet :",bid)
+        print(merah,"[L]",putih+str([ch])+"", "Balance :",num_format(balance),merah,"Profit: ",num_format(profit),putih, "Bet :",num_format(bidshow))
         bid = int(bid) * int(if_lose)
-        print("Total =",num_format(total), end="\r") 
-        play = scr.post(url_login, data={
-"a":"PlaceBet",
-"s":"4b0e122438114b6aa8550df1d4ace992",
-"PayIn": bid,
-"Low": low,
-"High":"999999",
-"ClientSeed":"5664556",
-"Currency":"doge",
-"ProtocolVersion":"2"
-}, headers=headers).json()
+        print(birutua,"Total =",num_format(total),putih, end="\r") 
+        play = scr.post(url_login, data={"a":"PlaceBet","s":"4b0e122438114b6aa8550df1d4ace992","PayIn": bid,"Low": low,"High":"999999","ClientSeed":"5664556","Currency":"doge","ProtocolVersion":"2"}, headers=headers).json()
+else:
+    print(kuning,"Yay sudah mencapai target profit : ",num_format(total))
