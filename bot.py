@@ -1,6 +1,5 @@
-  
-import cloudscraper
-import json
+import cloudscraper, json, sys
+from json import *
 #Data
  #Bet Set
 base_bet = float(input('Base Bet :'))
