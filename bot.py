@@ -5,14 +5,14 @@ if choice == 'Y':
     from config import *
     ch = random.randint(chance1, chance2)
 else :
-    print("You will use ultimate config please see this base bet before")
+    print("You will use ultimate config please see this base bet before",kuning)
     print("[1] Balance 100 DOGE+ = 0.001")
     print("[2] Balance 200 DOGE+ = 0.002")
     print("[3] Balance 300 DOGE+ = 0.003")
     print("[4] Balance 400 DOGE+ = 0.004")
     print("[5] Balance 500 DOGE+ = 0.005")
     print("[6] Balance 600 DOGE+ = 0.006")
-    print("[7] Balance 700 DOGE+ = 0.007")
+    print("[7] Balance 700 DOGE+ = 0.007",putih)
     base_bet = float(input("Base Bet :"))
     Username = input("Username :")
     Password = input("Password :")
