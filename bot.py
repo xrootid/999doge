@@ -66,7 +66,7 @@ def trialuser():
 					balance = (play['StartingBalance'] + play['PayOut']) / float(100000000)
 					if numws > ws:
 						ws +=1
-					print(hijau+"[W]",putih+"["+str(ch)+"]"+hijau,"Profit: "+num_format(profit)+putih+" ","Bet : "+num_format(bidshow))
+					print(hijau+"[W]",putih+"["+str(ch)+"]"+hijau,"My Profit: "+num_format(profit)+putih+" ","Bet : "+num_format(bidshow))
 					if base_bet > 0:
 						bid = (0 + base_bet) * float(100000000)
 					else:
@@ -80,7 +80,7 @@ def trialuser():
 					balance = (play['StartingBalance'] - base_bet) / float(100000000)
 					if numls > ls:
 						ls += 1
-					print(merah+"[L]",putih+"["+str(ch)+"]"+ merah,"Profit: "+num_format(profit)+putih,"Bet : "+num_format(bidshow))
+					print(merah+"[L]",putih+"["+str(ch)+"]"+ merah,"My Profit: "+num_format(profit)+putih,"Bet : "+num_format(bidshow))
 					bid = int(bid) * int(if_lose)
 					print(biru+"Total "+num_format(total)+putih,kuning+num_format(balance)+putih,hijau+"WS:"+str(ws)+"["+str(numws)+"]",merah+"LS:"+str(ls)+"["+str(numls)+"]"+putih, end="\r") 
 					play = scr.post(url_login, data={"a":"PlaceBet","s":ses['SessionCookie'],"PayIn": bid,"Low": low,"High":"999999","ClientSeed":"5664556","Currency":"doge","ProtocolVersion":"2"}, headers=headers).json()
@@ -142,7 +142,7 @@ def premiumuser():
 				balance = (play['StartingBalance'] + play['PayOut']) / float(100000000)
 				if numws > ws:
 					ws +=1
-				print(hijau+"[W]",putih+"["+str(ch)+"]"+hijau,"Profit: "+num_format(profit)+putih+" ","Bet : "+num_format(bidshow))
+				print(hijau+"[W]",putih+"["+str(ch)+"]"+hijau,"My Profit: "+num_format(profit)+putih+" ","Bet : "+num_format(bidshow))
 				if base_bet > 0:
 					bid = (0 + base_bet) * float(100000000)
 				else:
@@ -156,7 +156,7 @@ def premiumuser():
 				balance = (play['StartingBalance'] - base_bet) / float(100000000)
 				if numls > ls:
 					ls += 1
-				print(merah+"[L]",putih+"["+str(ch)+"]"+ merah,"Profit: "+num_format(profit)+putih,"Bet : "+num_format(bidshow))
+				print(merah+"[L]",putih+"["+str(ch)+"]"+ merah,"My Profit: "+num_format(profit)+putih,"Bet : "+num_format(bidshow))
 				bid = int(bid) * int(if_lose)
 				print(biru+"Total "+num_format(total)+putih,kuning+num_format(balance)+putih,hijau+"WS:"+str(ws)+"["+str(numws)+"]",merah+"LS:"+str(ls)+"["+str(numls)+"]"+putih, end="\r") 
 				play = scr.post(url_login, data={"a":"PlaceBet","s":ses['SessionCookie'],"PayIn": bid,"Low": low,"High":"999999","ClientSeed":"5664556","Currency":"doge","ProtocolVersion":"2"}, headers=headers).json()
@@ -174,7 +174,7 @@ if premium == 'Y':
 		print("\033[1;31m====================================================\033[0m")
 		print("\033[1;32m[+]\033[0m             \033[0;36mDO WITH YOUR OWN RISK \033[0m           \033[1;32m[+]\033[0m")
 		print("\033[1;32m[+]\033[0m \033[1;33mCreator : Layscape\033[0m                           \033[1;32m[+]\033[0m")
-		print("\033[1;32m[+]\033[0m \033[1;33mPremium Script Member\033[0m                   \033[1;32m[+]\033[0m")
+		print("\033[1;32m[+]\033[0m \033[1;33mPremium Script Member\033[0m                        \033[1;32m[+]\033[0m")
 		print("\033[1;31m====================================================\033[0m")
 		print("Disclaimer : \nScript tidak jalan jangan salahkan author. \nHarap baca petunjuk dengan baik.")
 		print("---------------------------")
@@ -184,7 +184,7 @@ else:
 	print("\033[1;31m====================================================\033[0m")
 	print("\033[1;32m[+]\033[0m             \033[0;36mDO WITH YOUR OWN RISK \033[0m           \033[1;32m[+]\033[0m")
 	print("\033[1;32m[+]\033[0m \033[1;33mCreator : Layscape\033[0m                           \033[1;32m[+]\033[0m")
-	print("\033[1;32m[+]\033[0m \033[1;33mBuy Premium : +6283153942438\033[0m                   \033[1;32m[+]\033[0m")
+	print("\033[1;32m[+]\033[0m \033[1;33mBuy Premium : +6283153942438\033[0m                 \033[1;32m[+]\033[0m")
 	print("\033[1;31m====================================================\033[0m")
 	print("Disclaimer : \nScript tidak jalan jangan salahkan author. \nHarap baca petunjuk dengan baik.")
 	print("---------------------------")
