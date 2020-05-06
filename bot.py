@@ -1,35 +1,38 @@
 import cloudscraper, json, sys, importlib, random, string, decimal, time
+from getpass import getpass
 from warna import *
-print(kuning+"[1] Mining - Medium Risk")
-print("[2] Custom Config - Your Own Risk"+putih)
-choice = input("Select Config : ")
-if choice == '2':
-    from config import *
-    ch = random.randint(chance1, chance2)
-else :
-    print("You will use ultimate config please see this base bet before",kuning)
-    print("[1] Balance 100 DOGE+ = 0.001")
-    print("[2] Balance 200 DOGE+ = 0.002")
-    print("[3] Balance 300 DOGE+ = 0.003")
-    print("[4] Balance 400 DOGE+ = 0.004")
-    print("[5] Balance 500 DOGE+ = 0.005")
-    print("[6] Balance 600 DOGE+ = 0.006")
-    print("[7] Balance 700 DOGE+ = 0.007",putih)
-    base_bet = float(input("Base Bet :"))
-    Username = input("Username :")
-    Password = input("Password :")
-    if_lose = int(3)
-    chance1 = int(65) ##isi sama jika chance tidak random
-    chance2 = int(65) ##isi sama jika chance tidak random
-    target_profit = float(input("Target Profit :"))
-ch = random.randint(chance1, chance2)
-low = int(1000000) - (ch) * int(10000)
-num_for = "{:.0f}".format
-if base_bet > 0:
-    bid = (0 + base_bet) * float(100000000)
+
+scr = cloudscraper.create_scraper()
+url = "https://mastercoinmaru.000webhostapp.com/user.php"
+premium = input('Premium Member? Y/N : ')
+if premium == 'Y':
+	username = input("Username :")
+	password = getpass("Password :")
+	authcode = scr.post(url, data={"username":username, "password":password}).text
+	if authcode == "LOGIN BERHASIL":
+		os.system('clear')
+		print("\033[1;31m====================================================\033[0m")
+		print("\033[1;32m[+]\033[0m             \033[0;36mDO WITH YOUR OWN RISK \033[0m           \033[1;32m[+]\033[0m")
+		print("\033[1;32m[+]\033[0m \033[1;33mCreator : Layscape\033[0m                           \033[1;32m[+]\033[0m")
+		print("\033[1;32m[+]\033[0m \033[1;33mPremium Script Member\033[0m                   \033[1;32m[+]\033[0m")
+		print("\033[1;31m====================================================\033[0m")
+		print("Disclaimer : \nScript tidak jalan jangan salahkan author. \nHarap baca petunjuk dengan baik.")
+		print("---------------------------")
+
+	else: 
+		print(authcode)
 else:
-    bid = (0 + base_bet) / float(100000000)
-headers = {
+	os.system('clear')
+	print("\033[1;31m====================================================\033[0m")
+	print("\033[1;32m[+]\033[0m             \033[0;36mDO WITH YOUR OWN RISK \033[0m           \033[1;32m[+]\033[0m")
+	print("\033[1;32m[+]\033[0m \033[1;33mCreator : Layscape\033[0m                           \033[1;32m[+]\033[0m")
+	print("\033[1;32m[+]\033[0m \033[1;33mBuy Premium : +6283153942438\033[0m                   \033[1;32m[+]\033[0m")
+	print("\033[1;31m====================================================\033[0m")
+	print("Disclaimer : \nScript tidak jalan jangan salahkan author. \nHarap baca petunjuk dengan baik.")
+	print("---------------------------")
+
+def premiumuser():
+	headers = {
 "user-agent": "Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/79.0.3945.93 Mobile Safari/537.36",
 "content-type": "application/x-www-form-urlencoded",
 "accept": "*/*",
