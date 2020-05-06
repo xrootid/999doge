@@ -1,4 +1,4 @@
-import cloudscraper, json, sys, importlib, random, string, decimal, time
+import cloudscraper, json, sys, importlib, random, string, decimal, time, os
 from getpass import getpass
 from warna import *
 
