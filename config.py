@@ -1,6 +1,6 @@
 ## LOGIN
-Username = 'akumaru40'
-Password = 'aqmar2012'
+Username = 'XXX'
+Password = 'XXX'
 ##BET SETTINGS
 base_bet = float(0.0010)
 if_lose = int(2)
