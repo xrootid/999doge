@@ -179,13 +179,5 @@ if premium == 'Y':
 		print("Disclaimer : \nScript tidak jalan jangan salahkan author. \nHarap baca petunjuk dengan baik.")
 		print("---------------------------")
 		premiumuser()
-else:
-	os.system('clear')
-	print("\033[1;31m====================================================\033[0m")
-	print("\033[1;32m[+]\033[0m             \033[0;36mDO WITH YOUR OWN RISK \033[0m           \033[1;32m[+]\033[0m")
-	print("\033[1;32m[+]\033[0m \033[1;33mCreator : Layscape\033[0m                           \033[1;32m[+]\033[0m")
-	print("\033[1;32m[+]\033[0m \033[1;33mBuy Premium : +6283153942438\033[0m                 \033[1;32m[+]\033[0m")
-	print("\033[1;31m====================================================\033[0m")
-	print("Disclaimer : \nScript tidak jalan jangan salahkan author. \nHarap baca petunjuk dengan baik.")
-	print("---------------------------")
-	trialuser()
+	else:
+		print("LOGIN FAILED CHECK USERNAME OR PASSWORD")
