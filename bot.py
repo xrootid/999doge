@@ -66,7 +66,7 @@ def trialuser():
 					balance = (play['StartingBalance'] + play['PayOut']) / float(100000000)
 					if numws > ws:
 						ws +=1
-					print(hijau+"[W]",putih+"["+str(ch)+"]"+hijau,"My Bet Profit: "+num_format(profit)+putih+" ","Bet : "+num_format(bidshow))
+					print(hijau+"[W]",putih+"["+str(ch)+"]"+hijau,"My Bet Profit: "+num_format(profit)+putih+" ",kuning,"Bet : "+num_format(bidshow),putih)
 					if base_bet > 0:
 						bid = (0 + base_bet) * float(100000000)
 					else:
@@ -80,7 +80,7 @@ def trialuser():
 					balance = (play['StartingBalance'] - base_bet) / float(100000000)
 					if numls > ls:
 						ls += 1
-					print(merah+"[L]",putih+"["+str(ch)+"]"+ merah,"My Bet Profit: "+num_format(profit)+putih,"Bet : "+num_format(bidshow))
+					print(merah+"[L]",putih+"["+str(ch)+"]"+ merah,"My Bet Profit: "+num_format(profit)+putih,kuning,"Bet : "+num_format(bidshow),putih)
 					bid = int(bid) * int(if_lose)
 					print(biru+"Total "+num_format(total)+putih,kuning+num_format(balance)+putih,hijau+"WS:"+str(ws)+"["+str(numws)+"]",merah+"LS:"+str(ls)+"["+str(numls)+"]"+putih, end="\r") 
 					play = scr.post(url_login, data={"a":"PlaceBet","s":ses['SessionCookie'],"PayIn": bid,"Low": low,"High":"999999","ClientSeed":"5664556","Currency":"doge","ProtocolVersion":"2"}, headers=headers).json()
@@ -142,7 +142,7 @@ def premiumuser():
 				balance = (play['StartingBalance'] + play['PayOut']) / float(100000000)
 				if numws > ws:
 					ws +=1
-				print(hijau+"[W]",putih+"["+str(ch)+"]"+hijau,"My Bet Profit: "+num_format(profit)+putih+" ","Bet : "+num_format(bidshow))
+				print(hijau+"[W]",putih+"["+str(ch)+"]"+hijau,"My Bet Profit: "+num_format(profit)+putih+" ",kuning,"Bet : "+num_format(bidshow),putih)
 				if base_bet > 0:
 					bid = (0 + base_bet) * float(100000000)
 				else:
@@ -156,7 +156,7 @@ def premiumuser():
 				balance = (play['StartingBalance'] - base_bet) / float(100000000)
 				if numls > ls:
 					ls += 1
-				print(merah+"[L]",putih+"["+str(ch)+"]"+ merah,"My Bet Profit: "+num_format(profit)+putih,"Bet : "+num_format(bidshow))
+				print(merah+"[L]",putih+"["+str(ch)+"]"+ merah,"My Bet Profit: "+num_format(profit)+putih,kuning,"Bet : "+num_format(bidshow),putih)
 				bid = int(bid) * int(if_lose)
 				print(biru+"Total "+num_format(total)+putih,kuning+num_format(balance)+putih,hijau+"WS:"+str(ws)+"["+str(numws)+"]",merah+"LS:"+str(ls)+"["+str(numls)+"]"+putih, end="\r") 
 				play = scr.post(url_login, data={"a":"PlaceBet","s":ses['SessionCookie'],"PayIn": bid,"Low": low,"High":"999999","ClientSeed":"5664556","Currency":"doge","ProtocolVersion":"2"}, headers=headers).json()
