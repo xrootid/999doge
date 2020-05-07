@@ -1,6 +1,6 @@
 ## LOGIN
-Username = 'layscape3'
-Password = 'aqmar2012'
+Username = 'xxx'
+Password = 'xxx'
 ##BET SETTINGS
 base_bet = float(0.0010)
 if_lose = float(1.3)
