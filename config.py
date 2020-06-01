@@ -14,5 +14,5 @@ autorefresh = "ON"#ON/OFF || REFRESH SETIAP PROFIT TERPENUHI
 #otomatis withdraw setelah ifbalance
 autowithdraw = "OFF"#ON/OFF
 ifbalance = int(42)
-address = "DEq3PSYgjvHYgXALxME6XU33C4K3nVgc4S"
+address = "DAUBWjznsAeddRw7X19j2ARShMMu62uPKU"
 amount = 10
