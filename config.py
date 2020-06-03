@@ -5,8 +5,8 @@ Password = 'xxx'
 
 ##BET SETTINGS
 base_bet = float(0.000001) ##your first bet
-resetif_win = int(1) ##refresh  after (x) win
-resetif_lose = int(1) ##refresh  after (x) lose
+resetif_win = int(1) ##refresh  after (x) win. 1 to OFF
+resetif_lose = int(1) ##refresh  after (x) lose. 1 to OFF
 if_win = float(0.3) ##if win
 if_lose = float(3) ##if lose
 chance1 = int(40) ##fill same if chance not random
