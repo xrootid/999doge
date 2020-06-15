@@ -32,6 +32,7 @@ tools = {
 	"IFLose":"2",
 	"IFWin":"1",
 	"TargetProfit":"0.0001",
+	"TargetLose":"99999999999",
 	"ResetBetIfWin":"1",
 	"ResetBetIfLose":"0",
 	"ResetSeedEachBet":"ON"
