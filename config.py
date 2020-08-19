@@ -44,16 +44,16 @@ Note :
 Interval In Second, Comma Allowed
 RefreshIfWin and RefreshIfLose Use Number to Use
 Example 
-RefreshIfWin : 3. Automaticaly Refresh After 3 Win Streak OFF to OFF
-RefreshIfLose : 3. Automaticaly Refresh After 3 Lose Streak OFF to OFF
+RefreshIfWin : 3. Automaticaly Refresh After 3 Win Streak 0 to OFF
+RefreshIfLose : 3. Automaticaly Refresh After 3 Lose Streak 0 to OFF
 '''
 feature = {
 	"BetInterval":"0",
 	"BetIntervalLose":"0",
 	"BetInvervalWin":"0",
 	"IntervalRefresh":"0",
-	"RefreshIfWin":"OFF",
-	"RefreshIfLose":"OFF",
+	"RefreshIfWin":"0",
+	"RefreshIfLose":"0",
 	"AutoRefresh":"ON"
 }
 
