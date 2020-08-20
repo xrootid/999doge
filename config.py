@@ -61,8 +61,8 @@ feature = {
 Dont Forget To Change Your Wallet Here
 '''
 withdraw = {
-	"AutoWithdraw":"ON",
+	"AutoWithdraw":"OFF",
 	"AmountWithdraw":"5",
 	"WithdrawIfBalance":"5",
-	"Address":"D916W29eCE6zvryu8wGUs7XYHiqhjmrEyd"
+	"Address":"xxx"
 }
