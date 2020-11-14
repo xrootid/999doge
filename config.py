@@ -10,14 +10,14 @@ Any Suggest PM Me On Whatsapp or Telegram
 Fill Your 999Doge Account
 '''
 account = {
-	"Username":"xxx",
-	"Password":"xxx"
+	"Username":"Hvckerman",
+	"Password":"Asulo112##"
 }
 '''
 Change Your Bet Strategy/Bet Setting
 '''
 betset = {
-	"Basebet":"0.00001",
+	"Basebet":"0.01",
 	"Chance1":"40",
 	"Chance2":"55"
 }
